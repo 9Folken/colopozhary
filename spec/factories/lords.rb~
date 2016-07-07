@@ -1,0 +1,25 @@
+require 'spec_helper'
+
+FactoryGirl.define do
+  
+  factory :lord do
+    
+     name  'Stark'
+     
+  end
+
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+

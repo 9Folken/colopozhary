@@ -1,0 +1,36 @@
+require 'rails_helper'
+require 'spec_helper'
+
+RSpec.describe Lord, type: :model do
+  before do
+    @unit1  = FactoryGirl.create(:unit, name: 'fighter', str: 7)
+    @unit2  = FactoryGirl.create(:unit, name: 'rouge')
+    @unit3  = FactoryGirl.create(:unit, name: 'mage', str: 3)
+    
+    @stuff =  FactoryGirl.create(:stuff)
+    @lord  = FactoryGirl.create(:lord)
+  end
+  
+  subject { @lord }
+  
+  describe "when Lord has correct name" do
+    #@lord. = @unit
+   it { expect(@lord.name).to eq 'Stark' } 
+  end
+  
+  describe "when Lord and Unit connected" do
+   
+    before do
+     @lord.units << @unit1
+     @lord.units << @unit2
+     @lord.units << @unit3
+     @lord.stuffs << @stuff
+     
+    
+     
+    end
+    it { expect(@lord.units[0].name).to eq 'fighter' } 
+    it { expect((@lord.units.map { |x| x.str }).sum).to eq 15 }  
+  end
+  
+end

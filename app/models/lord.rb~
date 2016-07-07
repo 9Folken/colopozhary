@@ -1,0 +1,8 @@
+class Lord < ActiveRecord::Base
+  
+  has_many :units
+  has_many :stuffs
+
+  
+
+end

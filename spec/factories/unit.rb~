@@ -1,0 +1,32 @@
+FactoryGirl.define do
+  
+  factory :unit do
+     name  'unit'
+     str  5 
+     endr 5
+     perc 5
+     aglt 5
+     mgc  5
+     int  5
+     chr  5
+     wis  5
+  end
+#   
+#   factory :unit do
+#     name = 'unit'
+#     str = 5 
+#     
+#   end
+#   
+#    factory :stuff do
+#     name = 'sword'
+#     str = 1 
+#     endr = 1
+#     perc = 0
+#     aglt = 0
+#     mgc = 0
+#     int = 0
+#     chr = 0
+#     wis = 0
+#   end
+end
